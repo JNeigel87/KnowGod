@@ -14,22 +14,74 @@ const Main = props => {
         }));
     }
 
+    const [psalm16, setPsalm16] = useState({
+        visible: false
+    });
+
+    const handleClick1 = () => {
+        setPsalm16(prevState => ({
+            isToggleOn: !prevState.isToggleOn
+        }));
+    }
+
+    const [psalm25, setPsalm25] = useState({
+        visible: false
+    });
+
+    const handleClick2 = () => {
+        setPsalm25(prevState => ({
+            isToggleOn: !prevState.isToggleOn
+        }));
+    }
+
+    const [psalm119, setPsalm119] = useState({
+        visible: false
+    });
+
+    const handleClick3 = () => {
+        setPsalm119(prevState => ({
+            isToggleOn: !prevState.isToggleOn
+        }));
+    }
+
+    const [prov13, setProv13] = useState({
+        visible: false
+    });
+
+    const handleClick4 = () => {
+        setProv13(prevState => ({
+            isToggleOn: !prevState.isToggleOn
+        }));
+    }
+
     // this.handleClick = this.handleClick.bind(this);
     return (
         <div>
             <div className="jumbotron">
                 <h1>Advice</h1> <h2>(See also Believing in God, Future, God's Will, Prayer)</h2>
                 <div className="col-sm-8">
-                    <h3>Psalm 16:7-8</h3>
+                    <h3 onClick={handleClick1}>Psalm 16:7-8</h3>
+                    {psalm16.isToggleOn ?
                     <p2>I will bless the Lord who has given me counsel; My heart also instructs me in the night seasons. I have set the Lord always before me; Because He is at my right hand I shall not be moved</p2>
+                :
+                <p3></p3>
+                }
                 </div>
                 <div className="col-sm-8">
-                    <h3>Psalm 25:4-7</h3>
+                    <h3 onClick={handleClick2}>Psalm 25:4-7</h3>
+                    {psalm25.isToggleOn ?
                     <p2>Show me Your ways, O Lord; Teach me Your paths. Lead me in Your truth and teach me, For You are the God of my slavation; On You I wait all the day. Remember, O Lord, Your tender mercies and Your loving kindnesses, For they are from of old. Do not remember the sins of my youth, nor my transgressions; According to Your mercy remember me, For Your goodness' sake, O Lord.</p2>
+                :
+                <p3></p3>
+                }
                 </div>
                 <div className="col-sm-8">
-                    <h3>Psalm 119:105</h3>
+                    <h3 onCLick={handleClick3}>Psalm 119:105</h3>
+                    {psalm119.isToggleOn ?
                     <p2>Your word is a lamp to my feet And a light to my path.</p2>
+                :
+                <p3></p3>
+                }
                 </div>
                 <div className="col-sm-8">
                     <h3 onClick={handleClick}>Proverbs 3</h3>
@@ -41,9 +93,13 @@ const Main = props => {
                     }
                 </div>
                 <div className="col-sm-8">
-                    <h3>Proverbs 13:10, 13</h3>
-                    <p2>By pride comes nothing but strife, But with the well-advised is wisdom.</p2>
-                    <p2>He who despises the word will be destroyed, But he who fears the commandment will be rewarded.</p2>
+                    <h3 onClick={handleClick4}>Proverbs 13:10, 13</h3>
+                    {prov13.isToggleOn ?
+                    <p2>By pride comes nothing but strife, But with the well-advised is wisdom.
+                    He who despises the word will be destroyed, But he who fears the commandment will be rewarded.</p2>
+                :
+                <p3></p3>
+                }
                 </div>
             </div>
         </div>
