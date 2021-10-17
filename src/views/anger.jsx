@@ -67,7 +67,6 @@ const Main = props => {
                     <h2>James 3:5-6</h2>
                     <p2>Even so the tongue is a little member and boasts great things. See how great a forest a little fire kindles! And the tongue is a fire, a world of iniquity. The tongue is so set among our members that it defiles the whole body, and sets on fire the courese of nature; and it is set on fire by hell</p2>
                 </div>
-
             </div>
         </div>
     )
